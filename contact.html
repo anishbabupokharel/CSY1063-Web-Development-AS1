@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="name">
+            <h1>Anish</h1>
+        </div>
     <nav>
         <ul class="navigation-link">
             <li><a href="index.html">Home</a></li>
@@ -16,5 +20,46 @@
             <li><a href="sitereport.html">Site Report</a></li>
         </ul>
     </nav>
+    </header>
+
+    <main>
+        <section class="contact">
+            <h2 class="section-title">Contact Me</h2>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <P>If yoou have any question or inquiry, please contact me.</P>
+                    <p><strong>Email:</strong>anishbabupokharel@gmail.com</p>
+                    <p><strong>Contact No:</strong>9825341363</p>
+            </div>
+
+            <form class="contact-form"
+                  action="milto:anishbabupokharel@gmail.com"
+                  method="post"
+                  enctype="text/plain">
+
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required>
+
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+
+                  <label for="massage">Massage</label>
+                  <textarea id="massage" name="massage" row="5" required></textarea>
+
+                  <button type="submit">Send Massage</button>
+                </form>
+        </section>
+    </main>
+      <footer>
+        <div class="footer-content">
+        <p>&copy; 2026 Anish Babu Pokharel. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/" target="_blank"><img src="Image/facebook.jpg" alt="Facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="Image/instragram.jpg" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/" target="_blank"><img src="Image/linkedin.jpg" alt="LinkedIn"></a>
+        </div>
+    </footer>        
 </body>
 </html>
