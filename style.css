@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*  HEADER SECTION */
+
+/* BODY STYLING */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+/* HEADER SECTION */
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #28a9c0;
+    color: black;
+}
+/* WEBSITE NAME / LOGO */
+.name h1{
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+/* NAVIGATION CONTAINER */
+nav {
+    justify-self: end;
+    font-size: 30px;
+}
+
+/* NAVIGATION LIST */
+.navigation-link {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+/* NAVIGATION LINKS (DEFAULT STATE) */
+.navigation-link li a {
+    text-decoration: none;
+    color: rgb(16, 18, 124);
+    font-size: 22px;
+    padding: 6px 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* NAVIGATION HOVER EFFECT */
+.navigation-link li a:hover {
+    position: relative;
+    text-decoration: none;
+    color: rgb(1, 1, 17);
+    font-size: 22px;
+    padding: 6px 10px;
+    background-color: #11bbb2;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+/*  FOOTER SECTION */
+footer{
+    background-color: #0c6575;
+    color: white;
+    text-align: center;
+    padding: 20px 40px;
+    margin-top: 60px;
+}
+ 
+/* FOOTER LAYOUT  */
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 15px;
+    text-align: center;
+}
+
+/* FOOTER TEXT */
+.footer-content p {
+    font-size: 14px;
+}
+
+/* SOCIAL MEDIA CONTAINER */
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* SOCIAL MEDIA ICON CIRCLE */
+.social-media a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #fff;
+    overflow: hidden;
+    transition: trensform 0.3s ease, background-color 0.3s ease;
+}
+
+/* SOCIAL MEDIA ICON IMAGE */
+.social-media img {
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+}
+
+/* SOCIAL MEDIA HOVER EFFECT (CIRCLE ONLY */
+.social-media a:hover {
+    background-color: #0c6575;
+    transform:  scale(1.1);
+}
