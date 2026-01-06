@@ -42,7 +42,7 @@ nav {
 /* NAVIGATION LINKS (DEFAULT STATE) */
 .navigation-link li a {
     text-decoration: none;
-    color: rgb(16, 18, 124);
+    color: rgb(248, 248, 249);
     font-size: 22px;
     padding: 6px 10px;
     transition: background-color 0.3s ease;
