@@ -31,7 +31,7 @@ header{
 /* NAVIGATION CONTAINER */
 nav {
     justify-self: end;
-    font-size: 30px;
+    /* font-size: 30px; */
 }
 
 /* NAVIGATION LIST */
@@ -64,7 +64,7 @@ nav {
 /* MAIN – GLOBAL*/
 main {
     padding: 60px 40px;
-    min-height: 75vh;
+    flex: 1;
 }
 
 /* COMMON SECTION TITLE */
@@ -263,7 +263,7 @@ footer{
     text-align: center;
     padding: 20px 40px;
     margin-top: 60px;
-    position: sticky;
+    position: relative;
 }
  
 /* FOOTER LAYOUT  */
@@ -297,7 +297,7 @@ footer{
     border-radius: 50%;
     background-color: #fff;
     overflow: hidden;
-    transition: trensform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 /* SOCIAL MEDIA ICON IMAGE */
@@ -347,17 +347,20 @@ footer{
         align-items: center;
         padding: 10px 20px;
         position: relative;
+        z-index: 1000;
     }
 
     nav {
         position: absolute;
-        top: 60px;
+        top: 100%;
         left: 0;
         width: 100%;
         background-color: #28a9c0;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+        z-index: 999;
     }
 
     /* STICK NAV LINK VERTICALLY */
@@ -375,6 +378,9 @@ footer{
     /* SHOW NAV WHEN CHECKBOX IS CLICKED */
     #menu-toggle:checked + .hamburger + nav {
         max-height: 500px; 
+        opacity: 1;
+        visibility: visible;
+
     }
 
     /* SHOW HAMBURGER ICON */
@@ -385,14 +391,14 @@ footer{
     /*ADJUST NAV LINK STYLE FOR MOBILE*/
     .navigation-link li a {
         font-size: 18px;
-        padding: 10px;
+        padding: 12px;
         color: white;
         display: block;
     }
 }
 
 /* SMALL MOBILE TEWAKS*/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 200px) {
     .name h1 {
         font-size: 24px;
     }
