@@ -223,6 +223,7 @@ main {
 .site-report {
     max-width: 1000px;
     margin: auto;
+    text-align: justify;
 }
 
 /* REPORT SECTION */
@@ -254,6 +255,7 @@ main {
     padding-left: 20px;
 }
 
+
 /*  FOOTER SECTION */
 footer{
     background-color: #0c6575;
@@ -261,6 +263,7 @@ footer{
     text-align: center;
     padding: 20px 40px;
     margin-top: 60px;
+    position: sticky;
 }
  
 /* FOOTER LAYOUT  */
@@ -308,4 +311,103 @@ footer{
 .social-media a:hover {
     background-color: #0c6575;
     transform:  scale(1.1);
+}
+/* HAMBURGER MENU STYLING */
+
+/* HIDE THE CHECKBOX*/
+#menu-toggle {
+    display: none;
+}
+
+/* HAMBURGER ICON */
+.hamburger {
+    display: none; 
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+
+/* MOBILE RESPONSIVE      */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: relative;
+    }
+
+    nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #28a9c0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    /* STICK NAV LINK VERTICALLY */
+    nav ul.navigation-link {
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+    }
+
+    nav ul.navigation-link li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    /* SHOW NAV WHEN CHECKBOX IS CLICKED */
+    #menu-toggle:checked + .hamburger + nav {
+        max-height: 500px; 
+    }
+
+    /* SHOW HAMBURGER ICON */
+    .hamburger {
+        display: flex;
+    }
+
+    /*ADJUST NAV LINK STYLE FOR MOBILE*/
+    .navigation-link li a {
+        font-size: 18px;
+        padding: 10px;
+        color: white;
+        display: block;
+    }
+}
+
+/* SMALL MOBILE TEWAKS*/
+@media screen and (max-width: 480px) {
+    .name h1 {
+        font-size: 24px;
+    }
+
+    .hamburger {
+        width: 25px;
+        height: 18px;
+    }
+
+    .hamburger span {
+        height: 2.5px;
+    }
+
+    .navigation-link li a {
+        font-size: 16px;
+        padding: 8px;
+    }
 }
