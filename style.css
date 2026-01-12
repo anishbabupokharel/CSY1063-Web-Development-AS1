@@ -5,17 +5,18 @@
 }
 
 html, body {
-    height: 100%;
     min-width: 320px;
+    height: auto;
     overflow-x: hidden;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 1.6;
 }
 
 /* HEADER SECTION */
@@ -28,6 +29,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 .name h1 {
@@ -62,6 +64,9 @@ nav {
     background-color: #11bbb2;
     border-radius: 5px;
 }
+main {
+    flex: 1;
+}
 
 /* HAMBURGER MENU */
 #menu-toggle {
@@ -87,8 +92,7 @@ nav {
 
 /* MAIN CONTENT */
 main {
-    flex: 1;
-    padding: 60px 40px;
+    padding: 40px 40px;
 }
 
 /* SECTION TITLE */
@@ -106,8 +110,8 @@ main {
     align-items: center;
     text-align: center;
     padding: 80px 20px;
-    min-height: calc(100vh - 140px);
     justify-content: center;
+    min-height: auto;
 }
 
 .Tagline {
@@ -195,7 +199,11 @@ main {
     gap: 15px;
 }
 
-.contact-form input,
+.contact-form input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 .contact-form textarea {
     padding: 10px;
     border: 1px solid #ccc;
@@ -270,7 +278,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 40px;
-    margin-top: auto;
+    width: 100%;
 }
 
 .footer-content {
@@ -309,7 +317,8 @@ footer {
 @media (max-width: 768px) {
     header {
         padding: 10px 20px;
-        position: relative;
+        position: sticky;
+        top: 0;
     }
 
     nav {
@@ -360,6 +369,11 @@ footer {
     .site-report {
         text-align: left;
     }
+    main {
+        padding-bottom: 20px;
+    }
+    iframe {
+        height: 240px
 }
 
 /* SMALL MOBILE */
@@ -375,7 +389,9 @@ footer {
     .hero {
         padding: 60px 16px;
     }
-
+    .site-report {
+        text-align: justify;
+    }
     .profile-picture {
         width: 200px;
         height: 200px;
@@ -386,7 +402,7 @@ footer {
     }
 }
 
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
     .name h1 {
         font-size: 22px;
     }
@@ -394,9 +410,9 @@ footer {
     main {
         padding: 16px 12px;
     }
-}
+} */
 
-@media (max-width: 360px) {
+/* @media (max-width: 360px) {
     header {
         padding: 10px 14px;
     }
@@ -405,4 +421,5 @@ footer {
         width: 180px;
         height: 180px;
     }
+} */
 }
